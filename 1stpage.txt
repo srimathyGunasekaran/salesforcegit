@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <style type="text/css">
+        div.a {
+            text-align: center;
+        }
+
+        label {
+            float: left;
+            width: 150px;
+            text-align: right;
+        }
+
+        p.solid {
+            border-style: solid;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form action="2ndpagefinal.html">
+        <div class="a">
+            <p class="solid">
+                <h1><b>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp Upload your Resume Here</b></h1>
+            </p>
+            <img src="jobsearchnew.jpg" width="500" height="333">
+            <br><br><br>
+            <div class="a">
+                <input type="file" id="myfile" name="filename" accept=".doc, .docx" onchange="filevalidation(this)"/>
+                <input type="submit" value="submit"onclick="window.location.href = '/2ndpagefinal.html';" >
+                <button type="reset" value="reset">Cancel</button>
+            </div>
+            <br>
+            <p style ="color: #FF0000"> *upload .doc or .docx format resume and the size should be within 4 MB</p>
+            <script type="text/javascript">
+                
+                function filevalidation(file) {
+                    var filesize = file.files[0].size / 4096;
+                    if (filesize > 4) {
+                        alert("File size exceeds 4 MB");
+                            ("Please upload a file less than 4 MB");
+                        document.getElementById('myfile').value = "";
+                    }
+                    else if (filesize.size == "")
+                    {
+                        alert("please choose a file");
+                    }
+                    else {
+                        alert("you have uploaded your resume");
+                    }
+                }
+                </script>
+        </div>
+    </form>
+</body>
+</html>
